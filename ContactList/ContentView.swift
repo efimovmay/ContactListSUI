@@ -11,18 +11,17 @@ struct ContentView: View {
     private let persons = Person.getPersons()
     var body: some View {
         TabView {
-            PersonsView(persons: persons)
+            PersonListView(persons: persons)
                 .tabItem {
                     Image(systemName: "person.2")
-                    Text("persons")
-                }
-            ContactListView()
-                .tabItem {
-                    Image(systemName: "person")
                     Text("Contacts")
                 }
+            ContactListView(persons: persons)
+                .tabItem {
+                    Image(systemName: "phone")
+                    Text("Numbers")
+                }
         }
-        .padding()
     }
 }
 

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonsView: View {
+struct PersonListView: View {
     let persons: [Person]
     
     var body: some View {
@@ -18,13 +18,13 @@ struct PersonsView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationTitle("Persons")
+            .navigationTitle("Contact list")
         }
     }
 }
 
-struct PersonsView_Previews: PreviewProvider {
+struct PersonListView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonsView(persons: Person.getPersons())
+        PersonListView(persons: Person.getPersons())
     }
 }
