@@ -63,8 +63,8 @@
 			children = (
 				5BDE0B032A19F785004CE2A2 /* ContactListApp.swift */,
 				5BDE0B052A19F785004CE2A2 /* ContentView.swift */,
-				5BDE0B152A19FBD9004CE2A2 /* DetailInfoView.swift */,
 				5BDE0B172A19FC10004CE2A2 /* PersonsView.swift */,
+				5BDE0B152A19FBD9004CE2A2 /* DetailInfoView.swift */,
 				5BDE0B192A19FC2E004CE2A2 /* ContactListView.swift */,
 				5BDE0B112A19F85A004CE2A2 /* Persons.swift */,
 				5BDE0B132A19F864004CE2A2 /* DataStore.swift */,

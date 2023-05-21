@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct PersonsView: View {
+    let persons: [Person]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(persons) { person in
+                NavigationLink(destination: DetailInfoView(person: person)) {
+                    Text(person.fullName)
+                }
+            }
+            .listStyle(.plain)
+            .navigationTitle("Persons")
+        }
     }
 }
 
 struct PersonsView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonsView()
+        PersonsView(persons: Person.getPersons())
     }
 }

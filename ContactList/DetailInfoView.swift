@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct DetailInfoView: View {
+    let person: Person
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 30) {
+            HStack {
+                Text("Phone: ")
+                Text("\(person.phone)")
+                Spacer()
+            }
+            HStack {
+                Text("Email: ")
+                Text("\(person.email)")
+                Spacer()
+            }
+            Spacer()
+        }
+        .padding()
+        .navigationTitle(person.fullName)
     }
 }
 
 struct DetailInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailInfoView()
+        DetailInfoView(person: Person.getPerson())
     }
 }

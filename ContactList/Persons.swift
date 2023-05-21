@@ -5,7 +5,8 @@
 //  Created by Aleksey on 23.01.2023.
 //
 
-struct Person {
+struct Person: Identifiable {
+    let id: Int
     let name: String
     let sureName: String
     let phone: String
@@ -13,6 +14,15 @@ struct Person {
     
     var fullName: String {
         name + " " + sureName
+    }
+    
+    static func getPerson() -> Person {
+        let person = Person(id: 1,
+                            name: DataStore.name[1],
+                            sureName: DataStore.sureName[1],
+                            phone: DataStore.phone[1],
+                            email: DataStore.email[1])
+        return person
     }
     
     static func getPersons() -> [Person] {
@@ -24,7 +34,8 @@ struct Person {
         let emails = DataStore.email.shuffled()
         
         for personNumber in 0..<names.count {
-            let person = Person(name: names[personNumber],
+            let person = Person(id: personNumber,
+                                name: names[personNumber],
                                 sureName: sureNames[personNumber],
                                 phone: phones[personNumber],
                                 email: emails[personNumber])
