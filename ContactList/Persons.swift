@@ -16,15 +16,6 @@ struct Person: Identifiable {
         name + " " + sureName
     }
     
-    static func getPerson() -> Person {
-        let person = Person(id: 1,
-                            name: DataStore.name[1],
-                            sureName: DataStore.sureName[1],
-                            phone: DataStore.phone[1],
-                            email: DataStore.email[1])
-        return person
-    }
-    
     static func getPersons() -> [Person] {
         var persons: [Person] = []
         

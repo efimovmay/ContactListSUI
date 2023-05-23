@@ -31,6 +31,6 @@ struct DetailInfoView: View {
 
 struct DetailInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailInfoView(person: Person.getPerson())
+        DetailInfoView(person: Person.getPersons().first!)
     }
 }

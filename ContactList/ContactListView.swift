@@ -14,14 +14,8 @@ struct ContactListView: View {
         NavigationStack {
             List(persons) { person in
                 Section(header: Text(person.fullName)) {
-                    HStack {
-                        Image(systemName: "phone")
-                        Text(person.phone)
-                    }
-                    HStack {
-                        Image(systemName: "mail")
-                        Text(person.email)
-                    }
+                    Label(person.phone, systemImage: "phone")
+                    Label(person.email, systemImage: "mail")
                 }
             }
             .navigationTitle("Contact list")
